@@ -1,0 +1,12 @@
+- name: Install the most recent Docker Community Edition 
+  command: amazon-linux-extras install docker -y
+
+- name: Start the Docker service
+  service:
+    name: docker
+    state: started
+
+- name: Add the ec2-user to the docker group
+  user:
+    name: ec2-user
+    group: docker

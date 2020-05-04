@@ -1,0 +1,6 @@
+- name: Deploy httpd
+  docker_container:
+    name: httpd
+    image: httpd:2.4
+    ports:
+      - "8080:80"
